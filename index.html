@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros Socorros - Aprenda Brincando</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="importmap">
+      {
+        "imports": {
+          "canvas-confetti": "https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/+esm"
+        }
+      }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Primeiros Socorros - Aprenda Brincando</h1>
+        <p>Teste seus conhecimentos e aprenda primeiros socorros de forma divertida!</p>
+        <div id="player-info" class="player-info hidden"> 
+            <span>Pontos: <span id="score">0</span></span> |
+            <span>Nível: <span id="level">1</span></span> |
+            <span>Medalhas: <span id="medals"></span></span>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <!-- Intro Area -->
+        <div id="intro-area">
+            <h2>Bem-vindo!</h2>
+            <p>Prepare-se para testar seus conhecimentos em primeiros socorros. Complete os níveis para ganhar pontos, medalhas e seu certificado!</p>
+            <p>Seu nome para o ranking: <strong id="display-player-name"></strong></p>
+            <button id="start-game-button">Iniciar Jogo</button>
+            <button id="reset-data-button">Reiniciar Progresso</button>
+        </div>
+
+        <!-- Unified Game Area -->
+        <div id="game-area" class="hidden">
+            <!-- Game content will be loaded here -->
+        </div>
+
+        <!-- Certificate Area -->
+        <div id="certificate-area" class="hidden certificate">
+             <h2>Certificado de Conclusão</h2>
+             <p>Parabéns, <span id="certificate-name">Jogador</span>!</p>
+             <p>Você concluiu com sucesso os desafios de Primeiros Socorros, alcançando o Nível 10.</p>
+             <div id="certificate-medals"></div>
+             <p>Data: <span id="certificate-date"></span></p>
+             <button id="back-to-intro-button">Voltar ao Início</button> 
+        </div>
+
+         <!-- Ranking Area -->
+         <section id="ranking-area" class="ranking">
+            <h2>Ranking</h2>
+            <ol id="ranking-list">
+                <!-- Ranking will be populated by JS -->
+                <li>Carregando...</li>
+            </ol>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Jogos de Primeiros Socorros. Todos os direitos reservados.</p>
+    </footer>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>
